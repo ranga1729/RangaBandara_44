@@ -1,0 +1,50 @@
+<%- layout('layouts/boilerPlate.ejs') %>
+
+<div id="recipe_form_container"
+style="
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;">
+
+    <div id="recipe_form"
+    style="
+    width: 90vw;">
+        <form action="/newRecipe" method="POST">
+
+            <div class="row mb-3" style="margin-top:10px;">
+                <label for="recipe_title" class="col-sm-2 col-form-label">Recipe Title</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="recipe_title" autofocus name="title" style="color:blue">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="recipe_description" class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="recipe_description" autofocus name="description" style="color:blue">
+                </div>
+            </div>
+
+            <div class="form-floating" style="margin-top:10px;">
+                <textarea class="form-control" id="recipe_ingredients" style="height: 100px" name="ingredients" style="color:blue"></textarea>
+                <label for="recipe_ingredients">Ingredients</label>
+            </div>
+
+            <div class="form-floating" style="margin-top:10px;">
+                <textarea class="form-control" id="recipe_instructions" style="height: 100px" name="instructions" style="color:blue"></textarea>
+                <label for="recipe_instructions">Instructions</label>
+            </div>
+
+            <div class="row mb-3" style="margin-top:10px;">
+                <label for="recipe_time" class="col-sm-2 col-form-label">Time To Cook</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="recipe_time" autofocus name="timeToCook" style="color:blue">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

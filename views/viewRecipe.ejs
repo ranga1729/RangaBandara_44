@@ -1,0 +1,23 @@
+<%- layout('layouts/boilerPlate.ejs') %>
+
+<div id="card-container" 
+style="
+    display: flex; 
+    gap: 10px;
+    flex-wrap: wrap;
+    border: 2px solid red;
+    height: 50vh;
+    ">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="/public/img/default.jpg" class="card-img-top" alt="food defaults image">
+            <div class="card-body">
+            <h5 class="card-title"> <%= recipeData.title %> </h5>
+            <p class="card-text"> <%= recipeData.recipe_time %> </p>
+            <p class="card-text"> <%= recipeData.description %> </p>
+            <p class="card-text"> <%= recipeData.ingredients %> </p>
+            <p class="card-text"> <%= recipeData.instructions %> </p>
+        </div>
+      </nav>
+</div>
+
